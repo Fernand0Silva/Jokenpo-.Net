@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jokenpo.View.Sobre"
+             Title="Sobre">
+    <ScrollView>
+    <VerticalStackLayout>
+            <Label Text="Descrição do projeto:" Margin="30"/>
+            <Label Text="feito por: " HorizontalOptions="Center"/>
+            <Label 
+                Text="Luiz, estudante de Desenvolvimento de Sistemas"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+           <Label 
+             Text="Gabriel, estudante de Desenvolvimento de Sistemas"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center" />  
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

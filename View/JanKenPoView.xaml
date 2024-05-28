@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jokenpo.View.JanKenPoView"
+             Title="Jan Ken Po">
+    <VerticalStackLayout>
+        <Entry Text="{Binding Nome}" Placeholder="Digite o seu nome"
+                WidthRequest="250"
+                Margin="10"/>
+        <Picker 
+            x:Name="JanKenPoPicker"
+            Title="Escolha :"
+            WidthRequest="250"
+            Margin="10"
+            SelectedIndex="{Binding Escolha}"
+            >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Pedra</x:String>
+                    <x:String>Papel</x:String>
+                    <x:String>Tesoura</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            x:Name="PlayBtn"
+            Text="Jogar!"
+            BackgroundColor="Black"
+            WidthRequest="250"/>
+        <Label 
+            Text="Jogador - 0/0 - Máquina"
+            HorizontalOptions="Center"
+            Margin="20"
+            FontSize="Medium"
+                    />
+        <Label 
+           Text= "{Binding Result}"
+            HorizontalOptions="Center"
+            FontSize="Large"/>
+        
+        <Label
+            x:Name="WinnerLabel"
+            Text="Vencedor :"
+            HorizontalOptions="Center"
+            Margin="25"
+            FontSize="Medium"/>
+
+    </VerticalStackLayout>
+</ContentPage>
